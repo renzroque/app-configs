@@ -1,0 +1,4 @@
+check process cron with pidfile /var/run/crond.pid
+   group root
+   start program = "/usr/sbin/cron"
+   stop  program = "/usr/bin/pgrep cron | /usr/bin/xargs kill && /bin/rm -f /var/run/crond.pid"

@@ -1,0 +1,57 @@
+--- 
+containers: 
+  - 
+    image: "registry.otlabs.fr/otlabs/simplicate-conakry-prosodie-web:b-1"
+    name: simplicate-conakry_web
+    passive: false
+    ports: 
+      - 
+        private: 8080
+        protocol: tcp
+        public: 8881
+        service: simplicate_web
+    volumes: 
+      - 
+        group: tomorgn
+        mode: "0644"
+        name: /usr/local/tomcat/conf/server.xml
+        owner: tomorgn
+        path: /usr/local/tomcat/conf/server.xml
+        template: simplicate/conakry/web/conf/server.xml
+      - 
+        group: tomorgn
+        mode: "0644"
+        name: /usr/local/tomcat/webapps/conakry/WEB-INF/classes/com/ocs/simplicate/simplicate.web.properties
+        owner: tomorgn
+        path: /usr/local/tomcat/webapps/conakry/WEB-INF/classes/com/ocs/simplicate/simplicate.web.properties
+        template: simplicate/conakry/web/webapps/conakry/WEB-INF/classes/com/ocs/simplicate/simplicate.web.properties
+      - 
+        group: tomorgn
+        mode: "0644"
+        name: /usr/local/tomcat/webapps/conakry/WEB-INF/classes/com/ocs/simplicate/dal/dal.properties
+        owner: tomorgn
+        path: /usr/local/tomcat/webapps/conakry/WEB-INF/classes/com/ocs/simplicate/dal/dal.properties
+        template: simplicate/conakry/web/webapps/conakry/WEB-INF/classes/com/ocs/simplicate/dal/dal.properties
+      - 
+        group: tomorgn
+        mode: "0644"
+        name: /usr/local/tomcat/webapps/conakry/WEB-INF/classes/log4j.properties
+        owner: tomorgn
+        path: /usr/local/tomcat/webapps/conakry/WEB-INF/classes/log4j.properties
+        template: simplicate/conakry/web/webapps/conakry/WEB-INF/classes/log4j.properties
+      - 
+        name: /usr/local/OpenORB-1.3.1/config/OpenORB.xml
+        path: /usr/local/OpenORB-1.3.1/config/OpenORB.xml
+        template: simplicate/conakry/web/OpenORB.xml
+services: 
+  - 
+    name: simplicate_web
+variables: 
+  DB_SERVER_IPADDRESS: MY_DB_SERVER_IPADDRESS
+  DB_SERVER_PASSWORD: MY_DB_SERVER_PASSWORD
+  DB_SERVER_PORT: MY_DB_SERVER_PORT
+  DB_SERVER_SID: MY_DB_SERVER_SID
+  DB_SERVER_USER: MY_DB_SERVER_USER
+  DB_USER_NAME: MY_DB_USER_NAME
+  DB_USER_PASSWORD: MY_DB_USER_PASSWORD
+  LOG_LEVEL: MY_LOG_LEVEL

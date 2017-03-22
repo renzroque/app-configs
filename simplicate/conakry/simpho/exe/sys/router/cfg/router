@@ -1,0 +1,46 @@
+##############################################
+# file:   router configuration
+# creation: Sat Mar  3 18:45:32 2007
+##############################################
+
+loglevel  {{ LOG_LEVEL }}
+
+# ASP set list
+asp_set: spcorgn
+asp: spcorgn
+
+# MD set list
+md_set: composer FIRST
+md: composer
+
+md_set: smpp34 FIRST
+md: smpp34
+
+md_set: popup FIRST
+md: popup
+
+
+# MSISDN set list
+msisdn_set: composer_set
+msisdn: \+50*
+msisdn: \+224[0-9]*
+
+msisdn_set: smpp34_set
+msisdn: \+55*
+
+msisdn_set: popup_set
+msisdn: \+33*
+
+# RULE list
+rule: spcorgn composer_set composer
+rule: spcorgn smpp34_set smpp34
+rule: spcorgn popup_set popup
+
+
+# SME list
+#sme: spcorgn composer 11544
+sme: spcorgn composer 689006
+sme: spcorgn smpp34 11552
+sme: spcorgn popup 11544
+
+# EXCEPT list

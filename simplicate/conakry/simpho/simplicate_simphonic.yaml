@@ -1,0 +1,213 @@
+--- 
+containers: 
+  - 
+    image: "registry.otlabs.fr/otlabs/simplicate-conakry-prosodie:b-9"
+    name: simplicate-conakry_services
+    passive: false
+    ports: 
+      - 
+        private: 5011
+        protocol: tcp
+        public: 5011
+        service: md_composer
+      - 
+        private: 8804
+        protocol: tcp
+        public: 8804
+        service: md_smpp34
+    volumes: 
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/sys/archiver/cfg/archiver
+        owner: sfoorgn
+        path: /home/sfoorgn/exe/sys/archiver/cfg/archiver
+        template: simplicate/conakry/simpho/exe/sys/archiver/cfg/archiver
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/sys/event/cfg/evasp
+        owner: sfoorgn
+        path: /home/sfoorgn/exe/sys/event/cfg/evasp
+        template: simplicate/conakry/simpho/exe/sys/event/cfg/evasp
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/sys/event/cfg/event
+        owner: sfoorgn
+        path: /home/sfoorgn/exe/sys/event/cfg/event
+        template: simplicate/conakry/simpho/exe/sys/event/cfg/event
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/sys/event/cfg/evetrap
+        owner: sfoorgn
+        path: /home/sfoorgn/exe/sys/event/cfg/evetrap
+        template: simplicate/conakry/simpho/exe/sys/event/cfg/evetrap
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/sys/gsm0348/cfg/gsm0348
+        owner: sfoorgn
+        path: /home/sfoorgn/exe/sys/gsm0348/cfg/gsm0348
+        template: simplicate/conakry/simpho/exe/sys/gsm0348/cfg/gsm0348
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/sys/router/cfg/router
+        owner: sfoorgn
+        path: /home/sfoorgn/exe/sys/router/cfg/router
+        template: simplicate/conakry/simpho/exe/sys/router/cfg/router
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/asp/spcorgn/cfg/ac_simplicate
+        owner: spcorgn
+        path: /home/sfoorgn/exe/asp/spcorgn/cfg/ac_simplicate
+        template: simplicate/conakry/simpho/exe/asp/asp/cfg/ac_simplicate
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/asp/spcorgn/cfg/ac_mtmo
+        owner: spcorgn
+        path: /home/sfoorgn/exe/asp/spcorgn/cfg/ac_mtmo
+        template: simplicate/conakry/simpho/exe/asp/asp/cfg/ac_mtmo
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/asp/spcorgn/cfg/saff
+        owner: spcorgn
+        path: /home/sfoorgn/exe/asp/spcorgn/cfg/saff
+        template: simplicate/conakry/simpho/exe/asp/asp/cfg/saff
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/asp/spcorgn/cfg/sc
+        owner: spcorgn
+        path: /home/sfoorgn/exe/asp/spcorgn/cfg/sc
+        template: simplicate/conakry/simpho/exe/asp/asp/cfg/sc
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/asp/spcorgn/cfg/sh_simplicate
+        owner: spcorgn
+        path: /home/sfoorgn/exe/asp/spcorgn/cfg/sh_simplicate
+        template: simplicate/conakry/simpho/exe/asp/asp/cfg/sh_simplicate
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/md/composer/cfg/md_composer
+        owner: sfoorgn
+        path: /home/sfoorgn/exe/md/composer/cfg/md_composer
+        template: simplicate/conakry/simpho/exe/md/composer/cfg/md_composer
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/md/composer/cfg/maff
+        owner: sfoorgn
+        path: /home/sfoorgn/exe/md/composer/cfg/maff
+        template: simplicate/conakry/simpho/exe/md/composer/cfg/maff
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/md/smpp34/cfg/md_smpp34
+        owner: sfoorgn
+        path: /home/sfoorgn/exe/md/smpp34/cfg/md_smpp34
+        template: simplicate/conakry/simpho/exe/md/smpp34/cfg/md_smpp34
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/sfoorgn/exe/md/smpp34/cfg/maff
+        owner: sfoorgn
+        path: /home/sfoorgn/exe/md/smpp34/cfg/maff
+        template: simplicate/conakry/simpho/exe/md/smpp34/cfg/maff
+      - 
+        group: root
+        mode: "0644"
+        name: /usr/lib/oracle/11.2/client32/network/admin/tnsnames.ora
+        owner: root
+        path: /usr/lib/oracle/11.2/client32/network/admin/tnsnames.ora
+        template: simplicate/conakry/simpho/tnsnames.ora
+      - 
+        group: root
+        mode: "0755"
+        name: /etc/omniORB.cfg
+        owner: root
+        path: /etc/omniORB.cfg
+        template: simplicate/conakry/simpho/omniORB.cfg
+      - 
+        group: sfoorgn
+        mode: "0755"
+        name: /home/spcorgn/services/IMEI.sh
+        owner: spcorgn
+        path: /home/spcorgn/services/IMEI.sh
+        template: simplicate/conakry/simpho/services/IMEI.sh
+      - 
+        group: sfoorgn
+        mode: "0755"
+        name: /home/spcorgn/services/Phonebook.sh
+        owner: spcorgn
+        path: /home/spcorgn/services/Phonebook.sh
+        template: simplicate/conakry/simpho/services/Phonebook.sh
+      - 
+        group: sfoorgn
+        mode: "0755"
+        name: /home/spcorgn/services/Schedule.sh
+        owner: spcorgn
+        path: /home/spcorgn/services/Schedule.sh
+        template: simplicate/conakry/simpho/services/Schedule.sh
+      - 
+        group: sfoorgn
+        mode: "0755"
+        name: /home/spcorgn/services/SimSession.sh
+        owner: spcorgn
+        path: /home/spcorgn/services/SimSession.sh
+        template: simplicate/conakry/simpho/services/SimSession.sh
+      - 
+        group: sfoorgn
+        mode: "0755"
+        name: /home/spcorgn/services/Solver.sh
+        owner: spcorgn
+        path: /home/spcorgn/services/Solver.sh
+        template: simplicate/conakry/simpho/services/Solver.sh
+      - 
+        group: sfoorgn
+        mode: "0755"
+        name: /home/spcorgn/services/Subscriber.sh
+        owner: spcorgn
+        path: /home/spcorgn/services/Subscriber.sh
+        template: simplicate/conakry/simpho/services/Subscriber.sh
+      - 
+        group: sfoorgn
+        mode: "0755"
+        name: /home/spcorgn/services/User.sh
+        owner: spcorgn
+        path: /home/spcorgn/services/User.sh
+        template: simplicate/conakry/simpho/services/User.sh
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/spcorgn/services/classes/com/ocs/simplicate/simplicate.services.properties
+        owner: spcorgn
+        path: /home/spcorgn/services/classes/com/ocs/simplicate/simplicate.services.properties
+        template: simplicate/conakry/simpho/services/classes/com/ocs/simplicate/simplicate.services.properties
+      - 
+        group: sfoorgn
+        mode: "0644"
+        name: /home/spcorgn/services/classes/com/ocs/simplicate/dal/dal.properties
+        owner: spcorgn
+        path: /home/spcorgn/services/classes/com/ocs/simplicate/dal/dal.properties
+        template: simplicate/conakry/simpho/services/classes/com/ocs/simplicate/dal/dal.properties
+role: simplicate_backend
+services: 
+  - 
+    name: md_composer
+  - 
+    name: md_smpp34
+variables: 
+  DB_SERVER_IPADDRESS: MY_DB_SERVER_IPADDRESS
+  DB_SERVER_PASSWORD: MY_DB_SERVER_PASSWORD
+  DB_SERVER_PORT: MY_DB_SERVER_PORT
+  DB_SERVER_SID: MY_DB_SERVER_SID
+  DB_SERVER_USER: MY_DB_SERVER_USER
+  LOG_LEVEL: MY_LOG_LEVEL

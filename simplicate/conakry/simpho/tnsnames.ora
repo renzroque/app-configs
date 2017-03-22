@@ -1,0 +1,12 @@
+{{ DB_SERVER_SID }} =
+  (DESCRIPTION =
+      (ADDRESS_LIST =
+            (ADDRESS = (PROTOCOL = TCP)(HOST = {{DB_SERVER_IPADDRESS}})(PORT = {{ DB_SERVER_PORT }}))
+	        )
+		    (CONNECT_DATA =
+		      	(SERVER = DEDICATED)
+			(SID = {{ DB_SERVER_SID }})
+		)
+	)
+
+

@@ -1,0 +1,11 @@
+<%= @v_v['DB_SERVER_SID'] || @g_v['DB_SERVER_SID'] %> =
+  (DESCRIPTION =
+      (ADDRESS_LIST =
+            (ADDRESS = (PROTOCOL = TCP)(HOST = <%= @v_v['DB_SERVER_IPADDRESS'] || @g_v['DB_SERVER_IPADDRESS'] %>)(PORT = <%= @v_v['DB_SERVER_PORT'] || @g_v['DB_SERVER_PORT'] %>))
+	        )
+		    (CONNECT_DATA =
+		      	(SERVER = DEDICATED)
+			(SID = <%= @v_v['DB_SERVER_SID'] || @g_v['DB_SERVER_SID'] %>)
+		)
+	)
+

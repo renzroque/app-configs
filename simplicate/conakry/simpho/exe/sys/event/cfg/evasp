@@ -1,0 +1,21 @@
+
+##############################################
+# file:event configuration : asp description
+# creation date:     Wed Jan 14 22:36:52 PHT 2015
+##############################################
+
+# ---------------------------------------
+# Static description of the asp
+# ---------------------------------------
+
+# Configuration of the asp asp
+asp spcorgn
+
+# List of md used by the asp asp
+md  composer
+
+# List of ac used by the asp asp
+ac  simplicate
+ac  mtmo
+
+# List of daemons used by the asp asp

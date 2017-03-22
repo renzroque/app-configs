@@ -1,0 +1,16 @@
+
+#########################################
+# file:event server: trap configuration
+# creation date:     Wed Jan 14 22:36:52 PHT 2015
+#########################################
+
+# Server snmp host name
+server_host_name  127.0.0.1
+server_ip_address 127.0.0.1
+
+server_object_id  1, 3, 6, 1, 4, 1, 8000, 1, 1
+
+# ----------------------------------------------------
+# Event filter per klass, module type and module name
+# ----------------------------------------------------
+ANY ANY ANY

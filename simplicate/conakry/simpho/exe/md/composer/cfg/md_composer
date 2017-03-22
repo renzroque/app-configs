@@ -1,0 +1,20 @@
+
+########################################
+# file: configuration for MD composer
+# creation date:     Wed Jan 14 22:36:53 PHT 2015
+########################################
+
+# log level, from 0 to 6 (debug)
+loglevel {{ LOG_LEVEL }}
+
+# clean and replay period (in secs)
+clean_msg_period        20
+replay_msg_period       20
+compression_7bit        1
+
+# protocol parameters
+protocol_version        1
+#msisdn +00000001
+# IP port name
+port_name               5011
+wait_timeout            5

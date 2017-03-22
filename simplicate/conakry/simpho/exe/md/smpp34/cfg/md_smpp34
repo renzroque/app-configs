@@ -1,0 +1,84 @@
+# do ***NOT*** edit
+
+##############################################
+# file: md_smpp34 configuration for md smpp34
+# creation:     Wed Feb 17 02:36:19 2016
+##############################################
+
+# MD GENERIC PARAMETERS
+loglevel 					   {{ LOG_LEVEL }}
+watcher                        0:0
+clean_msg_period               60
+nack_wait_delay                30
+replay_msg_period              900
+frag_max                       1000000
+Com_max                        100000
+noScAck_window_max             1
+scAck_delay_max                5
+nbSmsSec                       5
+congestionIfDisconnection      0
+# CONNECTION PARAMETERS
+nbCnx                          1
+nbSock                         2
+normal_secours                 0
+retry_max                      1
+addMT_1                        127.0.0.1
+portMT_1                       9030
+sysIdMT_1                      503281
+sysPwdMT_1                     OBER
+sysTypMT_1                     SMPP
+addMO_1                        127.0.0.1
+portMO_1                       9030
+sysIdMO_1                      rapsodia
+sysPwdMO_1                     rapsodia
+sysTypMO_1                     none
+addMT_2                        127.0.0.1
+portMT_2                       9030
+sysIdMT_2                      rapsodia
+sysPwdMT_2                     rapsodia
+sysTypMT_2                     none
+addMO_2                        127.0.0.1
+portMO_2                       9030
+sysIdMO_2                      rapsodia
+sysPwdMO_2                     rapsodia
+sysTypMO_2                     none
+#LOGIN PARAMETERS
+connect_timeout                90
+bind_sme                       NO
+bind_ton                       0
+bind_npi                       0
+use_bind                       0
+bind_addr                      127.0.0.1
+bind_port_min                  0
+bind_port_max                  0
+#LOGOUT PARAMETERS
+activity_timeout               15
+rx_unbind_first                0
+event_notification_delay       0
+#LINK PARAMETERS
+use_tx_link                    1
+use_rx_link                    0
+#MT FRAME PARAMETERS
+msisdn_force_out               0
+sme_force_out                  715
+sme_ton                        5
+sme_npi                        1
+tpvp_format                    1
+utc_diff                       -
+use_class                      0
+use_priority                   1
+force_rpack                    0
+use_schld_delivery             0
+#MO FRAME PARAMETERS
+msisdn_force_in                0
+sme_force_in                   0
+#OTHERS PARAMETERS
+code                           +33
+added0                         1
+ackFormat                      ascii_hexa
+mno                            standard
+blacklistDelay                 5
+mmsFalse                       0
+version                        34
+ignoreFailedRpAck              NO
+addLog                         YES:SCN

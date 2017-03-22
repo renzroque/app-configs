@@ -1,0 +1,18 @@
+# do ***NOT*** edit
+
+##############################################
+# file: ac_mtmo configuration for asp spcorgn
+# creation:     Tue Sep  8 08:20:51 2015
+##############################################
+
+# log level, from 0 to 6 (debug)
+loglevel  {{ LOG_LEVEL }}
+scanning_duration       5
+conversion_ASCII_GSM    1
+file_extension  msg
+polling_dir     /home/sfoorgn/exe/asp/spcorgn/polling
+sh_dir  /home/sfoorgn/exe/asp/spcorgn/history
+history_dir     /home/sfoorgn/exe/asp/spcorgn/history
+receiving_dir   /home/sfoorgn/exe/asp/spcorgn/receiving
+receive_mo      N
+overwrite       0

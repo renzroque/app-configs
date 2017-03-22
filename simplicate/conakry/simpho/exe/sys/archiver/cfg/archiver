@@ -1,0 +1,16 @@
+
+#############################################
+# file: archiver configuration for archiver
+# creation date:     Wed Jan 14 22:36:52 PHT 2015
+#############################################
+
+# log level, from 0 to 6 (debug)
+loglevel {{ LOG_LEVEL }}
+
+server_address    127.0.0.1
+server_port       5000
+
+# archiver dynamic lib(s)
+# name          connection string (format depends on library)
+# oracle db example: arch_lib db_oracle host=my_host port=my_port dbname=my_dbname user=my_user password=my_password
+arch_lib ff

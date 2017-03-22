@@ -1,0 +1,21 @@
+##############################################
+# file:   sc configuration for asp
+# creation: Sat Mar  3 18:41:19 2007
+##############################################
+
+# log level, from 0 to 6 (debug)
+loglevel    {{ LOG_LEVEL }}
+
+# limits
+mx_sh       50
+mx_session  5000
+
+# behavior
+backup    500
+duplicate 0
+routMoText
+
+# applications
+# tag name    local remote  valid prio  cattp port  udp host:port tar_range
+appli   simplicate      FA      FA      2400    L       250     localhost:4001     0xf14f43,0xf14f46,0xf14f47,0xf14f4d
+appli   mtmo    00      00      60      L       0       _:0

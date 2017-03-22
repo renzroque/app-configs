@@ -1,0 +1,7 @@
+check process tomcat with pidfile "/var/run/tomcat.pid"
+start program = "/usr/local/tomcat/bin/startup.sh"
+as uid tomorgn gid tomorgn
+stop program = "/usr/local/tomcat/bin/shutdown.sh"
+as uid tomorgn gid tomorgn
+if failed port 8080 then alert
+if failed port 8080 for 5 cycles then restart

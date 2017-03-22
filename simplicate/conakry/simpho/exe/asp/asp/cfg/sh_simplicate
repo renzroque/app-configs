@@ -1,0 +1,52 @@
+
+#####################################################
+# file: simplicate configuration for asp asp
+# creation date:     Wed Jan 14 22:36:53 PHT 2015
+#####################################################
+
+# log level, from 0 to 6 (debug)
+loglevel  {{ LOG_LEVEL }}
+
+# Operator service name
+service_name  SIMplicate
+language_path  ctx/simp_language
+default_language   1
+restriction_alert  0
+SMS_notification   1
+
+# Shot cadence delay...
+tailback_emission  0
+
+# GSM network tuning...
+ack_duration   300
+receive_timeout   300
+validity_period   250
+
+# CAT-TP services
+cattp_sdu_size     840
+
+# Administration services
+orb_param       default
+root_services   simpho_orgn.root
+subscriber_services     subscriber_orgn.service
+phonebook_services      phonebook_orgn.service
+session_services        simsession_orgn.service
+campaign_services       promotion_orgn.service
+t0348_services  gsm0348_orgn.Object
+
+#Toggle force backup
+force_backup    0
+
+# Authorization Request
+mmi_auth_request      1
+
+# Pricing Request
+price_request         0
+
+# Multi Operator
+multi_operator        0
+# Operator Info
+# Format: <oper_n> oper_n_suffix>|<oper_n_languageId>,<oper_n+1> oper_n+1_suffix>|<oper_n+1_languageId>, ...
+# Language Id: 1=ENGLISH 2=FRENCH 3=PORTUGUES 4=SERBIAN 5=THAI 6=INDIAN 7=ARABIC, 8=SPANISH, 9=INDONESIAN
+# Sample format: 1:+63|2,2:+33|3,3:35613|1
+operator_info	1:+55|2,2:+66|2

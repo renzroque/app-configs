@@ -1,0 +1,9 @@
+# log level, from 0 to 6 (debug)
+loglevel        {{ LOG_LEVEL }}
+# central archiver ip address
+server_address  127.0.0.1
+# central archiver ip port number
+server_port     5000
+# retry connection with the server delay
+timeout         60
+  

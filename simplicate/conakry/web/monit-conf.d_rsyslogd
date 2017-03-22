@@ -1,0 +1,4 @@
+check process rsyslogd
+   with pidfile "/var/run/rsyslogd.pid"
+   start program = "/usr/sbin/rsyslogd"
+   stop program = "/usr/bin/pgrep rsyslogd | /usr/bin/xargs kill && /bin/rm -f /var/run/rsyslogd.pid"

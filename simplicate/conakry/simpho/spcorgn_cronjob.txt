@@ -1,0 +1,10 @@
+0 6 * * * spcorgn . /home/spcorgn/.profile;/home/sfoorgn/bin/spcorgn.cron 2>/dev/null
+5 7 * * * spcorgn . /home/spcorgn/.profile;/home/spcorgn/services/CompileDailyStatistics-oracle.sh GINCOSY_SIMPLICATE l9sikIs0aH ORA11 >> /home/spcorgn/services/logs/CompileDailyStatistics-oracle.log
+5 6 * * * spcorgn . /home/spcorgn/.profile;/home/spcorgn/script/restart.sh
+5 6 1 * * spcorgn . /home/spcorgn/.profile;/home/spcorgn/CDR/bin/cdr_manager.sh 2>&1 > /dev/null
+5 6 * * * spcorgn . /home/spcorgn/.profile;/home/spcorgn/CDR/sftp/syncRefund.sh 2>&1 > /dev/null
+0 17 * * * spcorgn . /home/spcorgn/.profile;/home/spcorgn/deleteSubs/bin/DeleteSub.sh 2>&1 > /dev/null
+5 2 * * * spcorgn . /home/spcorgn/.profile;/home/spcorgn/script/cleanlogs.sh > /home/spcorgn/script/cleanlogs.log
+0,10,20,30,40,50 * * * * spcorgn . /home/spcorgn/.profile;/home/spcorgn/script/bi.sh
+0 10 16 * * spcorgn . /home/spcorgn/.profile;/home/spcorgn/billing/test.sh >> /home/spcorgn/billing/summary
+0 10 30 * * spcorgn . /home/spcorgn/.profile;/home/spcorgn/billing/test.sh >> /home/spcorgn/billing/summary

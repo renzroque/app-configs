@@ -1,0 +1,19 @@
+
+################################
+# file:   event configuration
+# creation date:     Wed Jan 14 22:36:52 PHT 2015
+################################
+
+# log level, from 0 to 6 (debug)
+loglevel  {{ LOG_LEVEL }}
+# bound host port
+host_port       127.0.0.1:6543
+# loop time out in seconds
+loop_time_out 600
+# maximum number of emails sent per second
+max_email_per_sec 1
+
+
+# ----------------------------------------------------
+# Event filter per klass, module type and module name
+# ----------------------------------------------------

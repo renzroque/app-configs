@@ -1,0 +1,35 @@
+[30/05/2016, 11:56:10 AM] Ricardo Carlos Garcia: # do NOT edit
+
+##############################################
+# file: md_popup configuration for md popup
+# creation:     Tue Apr 21 17:21:58 2015
+##############################################
+
+# log level, from 0 to 6 (debug)
+loglevel                                           {{ LOG_LEVEL }}
+
+clean_msg_period                                   300
+replay_msg_period                                  300
+frag_max                                           20000
+Mt_max                                             20000
+fragWaitSend_max                                   20000
+fragWaitScAck_max                                  2000
+fragWaitRpAck_max                                  20000
+uncongestion_percent                               10
+noScAck_window_max                                 1
+scAck_delay_max                                    5
+id                                                 {{ POPUP_ID }}
+sme                                                {{ POPUP_SME }}
+sme_alm                                            {{ POPUP_SME_ALM }}
+sme_simkro                                         {{ POPUP_SME_SIMKRO }}
+certificat                                         default
+password                                           default
+time_request                                       10
+time_notif                                         600
+add_POPUP                                          {{ POPUP_IPADDRESS }}
+url_NOTIF                                          {{ POPUP_NOTIF_URL }}
+url_MSG                                            {{ POPUP_MSG_URL }}
+use_proxy                                          1
+add_PROXY                                          {{ POPUP_PROXY_IPADDRESS }}
+port_PROXY                                         {{ POPUP_PROXY_PORT }}
+ton                                                +33
